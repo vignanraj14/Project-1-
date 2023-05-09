@@ -1,0 +1,169 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>About Me</title>
+	<style>
+		section {
+			margin-bottom: 20px;
+			padding: 10px;
+			border: 1px solid black;
+		}
+		
+		section h2 {
+			margin-top: 0px;
+		}
+
+		.highlight {
+			font-weight: bold;
+		}
+
+		.accordion {
+			background-color: #eee;
+			color: #444;
+			cursor: pointer;
+			padding: 18px;
+			width: 100%;
+			border: none;
+			text-align: left;
+			outline: none;
+			font-size: 15px;
+			transition: 0.4s;
+			margin-bottom: 10px;
+		}
+
+		.active, .accordion:hover {
+			background-color: #ccc;
+		}
+
+		.panel {
+			padding: 0 18px;
+			background-color: white;
+			display: none;
+			overflow: hidden;
+		}
+
+		.panel p {
+			margin-top: 0px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		 <link rel="stylesheet" href="https://assignmet2.s3.us-east-2.amazonaws.com/cssfile.css">
+		<h1>About Me</h1>
+	</header>  
+	<nav>
+		<ul>
+			<li><a href="Home Page.html">Home</a></li>
+			<li><a href="#personal">Personal Information</a></li>
+			<li><a href="#education">Education</a></li>
+			<li><a href="#work">Work Experience</a></li>
+			<li><a href="#programming skills"> Programming Skills</a></li>			
+			<li><a href="https://www.linkedin.com/in/vignan-raj-lingampally-6359431a1">LinkedIn Profile</a></li>
+	</ul>
+	</nav>
+	<section id="Contact Me">
+		<h2>Contact Me</h2>
+		<form onsubmit="return validateForm(event)">
+		  <label for="name">Name:</label>
+		  <input type="text" id="name" name="name" required>
+		  <label for="email">Email:</label>
+		  <input type="email" id="email" name="email" required><br><br>
+		  <label for="message">Message:</label>
+		  <textarea id="message" name="message" required></textarea><br><br>
+		  <button type="reset">Reset</button>
+		  <button type="submit">Submit</button>
+		  <button type="button" onclick="location.href='mailto:vignanraj14@gmail.com';">Email Me</button>
+		</form>
+		<p id="submit-message"></p>
+	  </section>
+	  
+	  <script>
+		function validateForm(event) {
+		  event.preventDefault();
+		  var name = document.getElementById("name").value;
+		  var email = document.getElementById("email").value;
+		  var message = document.getElementById("message").value;
+		  var re = /\S+@\S+\.\S+/;
+		  if (name === "" || email === "" || message === "") {
+			alert("Please fill in all required fields");
+			return false;
+		  } else if (!re.test(email)) {
+			alert("Invalid email format");
+			return false;
+		  } else {
+			submitForm();
+			return true;
+		  }
+		}
+	  
+		function submitForm() {
+		  var message = document.getElementById("submit-message");
+		  message.innerHTML = "Submitted successfully to Vignan";
+		}
+	  </script>
+	  
+		<section id="personal">
+	<h2>Personal Information</h2>			
+			<p><strong>Name:</strong> Vignan Raj Lingampally</p>
+			<p><strong>Date Of Birth:</strong> 08/14/1999</p>
+			<p><strong>Email:</strong> vignanraj14@gmail.com</p>
+			<p><strong>Phone:</strong> +91 8008035235</p>
+			<p><strong>Address:</strong> 9-5-441/2,Karimnagar,Telangana-India</p>
+			<img src="https://rajbucket14.s3.us-east-2.amazonaws.com/WhatsApp+Image+2023-05-07+at+1.04.25+AM.jpeg" width="200" height="200" >
+		</section>
+		
+		<section id="education">
+			<Style>
+			table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+			padding: 10px;
+			text-align: center;}
+
+			</Style>
+		
+			<h2>Education</h2>
+			<table>
+				<tr>
+					<th>Degree</th>
+					<th>Field of Study</th>
+					<th>Institution</th>
+					<th>Graduation Year</th>
+				</tr>
+				<tr>
+					<td>Bachelor's of Technology</td>
+					<td>Computer Science and Engineering</td>
+					<td>  JNTU,Hyderabad-India  </td>
+					<td>2016-2020</td>
+				</tr>
+				<tr>
+					<td>Master's</td>
+					<td>  Computer Science </td>
+					<td>  Oklahoma Christian University </td>
+					<td>2023(Present-)</td>
+				</tr>
+			</table>
+		</section>
+		<section id="work">
+			<h2>Work Experience</h2>
+			<ul>
+				<li><strong>Quality Assurance</strong> - Infosys Limited (2020-2022)</li>
+			</ul>
+		</section>
+		<section id="programming skills">
+			<h2> Programming Skills</h2>
+			<ul>
+				<li>C#</li>
+				<li>HTML</li>
+				<li>CSS3</li>
+				<li>JavaScript</li>
+				<li>Python</li>
+				<li>Java</li>
+			</ul>
+			<p><strong>Languages known:</strong> English, Telugu and Hindi.</p>
+			<p class="highlight" ><font color=black>*proficient in all above provided languages</p>
+		</section>
+	</main>
+</body>
+</html>

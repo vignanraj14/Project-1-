@@ -1,0 +1,154 @@
+/* Styles for body element */
+body {
+  text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.38889;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    background: #F2EDD9 url("file:///C:/xampp/htdocs/webpages/HtmlPages/background.mp4") no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+  
+  video {
+    width: 500px;
+    height: 350px;
+  }
+
+
+/* Styles for heading elements */
+h1, h2 {
+  font-family: Georgia, serif;
+  font-weight: bolder;
+  color: #0ee62b;
+
+}
+
+/* Styles for navigation menu */
+nav {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+p {
+  color: black;
+}
+
+ul li {
+  color: blue;
+}
+
+table {
+  color: black;
+}
+
+table th,
+table td {
+  color: black;
+}
+
+nav a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+nav a:hover {
+  background-color: #ccc;
+}
+
+/* Styles for two-column layout */
+.container {
+  display: flex;
+}
+
+.left {
+  width: 30%;
+  margin-right: 20px;
+}
+
+.right {
+  flex: 1;
+}
+
+/* Styles for generic class selector */
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+/* Additional styles for page header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+/* Styles for page content */
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+label {
+  color: rgb(226, 36, 36);
+}
+section h2 {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+}
+
+li {
+  margin: 5px 0;
+}
+
+/* Styles for footer */
+footer {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 100%;
+    margin-right: 0;
+  }
+}
